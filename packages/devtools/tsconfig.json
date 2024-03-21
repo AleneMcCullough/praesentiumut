@@ -1,0 +1,19 @@
+{
+  "extends": "../../tsconfig-base.json",
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "outDir": "./tools",
+    "baseUrl": ".",
+    "rootDir": "./src",
+    "skipLibCheck": true,
+    "isolatedModules": false
+  },
+  "references": [
+    { "path": "../util/tsconfig.dist.json" },
+    { "path": "../hooks/tsconfig.dist.json" },
+    { "path": "../component-library/tsconfig.dist.json" }
+  ],
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["src/**/*.test.ts", "src/**/*.test.tsx"]
+}

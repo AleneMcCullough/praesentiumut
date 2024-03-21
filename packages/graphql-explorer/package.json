@@ -1,0 +1,48 @@
+{
+  "name": "@cutting/graphql-explorer",
+  "description": "Swagger for graphql.....init",
+  "version": "4.22.4",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dagda1/cuttingedge.git"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "license": "MIT",
+  "scripts": {
+    "start": "PORT=8888 NODE_ENV=development cutting devserver-start",
+    "test": "NODE_ENV=test cutting test",
+    "build": "NODE_ENV=production cutting static-build",
+    "prepublishOnly": "yarn build"
+  },
+  "dependencies": {
+    "@cutting/react-abortable-fetch": "0.9.3",
+    "@cutting/util": "4.24.0",
+    "graphql": "^15.5.0"
+  },
+  "devDependencies": {
+    "@cutting/devtools": "4.24.0",
+    "@cutting/the-watcher": "0.2.0",
+    "abortcontroller-polyfill": "^1.7.1",
+    "eslint-loader": "^4.0.2",
+    "node-fetch": "^2.6.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "volta": {
+    "extends": "../../package.json"
+  },
+  "keywords": [
+    "hotkeys",
+    "focus",
+    "react",
+    "reactjs",
+    "graphql",
+    "dataviz"
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "name": "praesentiumut",
+  "version": "1.10.1",
+  "scripts": {
+    "build": "yarn workspaces run build",
+    "build:tsc": "tsc -b ./tsconfig.packages.json",
+    "clean:tsbuild": "yarn build:tsc -- --clean && find . \\( -name node_modules -o -name dir2 -o -path name \\) -prune -false -o -name 'dist' -type d   -exec rm -rf {} +",
+    "test": "CI=true yarn workspaces run test",
+    "start": "yarn build && yarn --cwd packages/website start",
+    "audit-packages": "cutting each-pkg cutting audit",
+    "lint": "eslint 'packages/**/*.{ts,tsx,js}' -c ./packages/component-library/.eslintrc.json --ignore-path ./.eslintignore --fix",
+    "lint:js": "eslint --ext .js . -c ./packages/devtools/.eslintrc.json --ignore-path ./.eslintignore --fix",
+    "watch": "yarn build:tsc && yarn tsc -b ./tsconfig.packages.json --watch"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.16.0",
+    "@types/jest": "^26.0.19",
+    "@types/node": "^14.14.14",
+    "lodash": "^4.17.21",
+    "node-sass": "^5.0.0",
+    "ssri": "8.0.1",
+    "typescript": "^4.2.4",
+    "url-parse": "^1.5.1"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/devtools",
+      "packages/testing",
+      "packages/eslint-config",
+      "packages/tsconfig",
+      "packages/useful-types",
+      "packages/devtools",
+      "packages/util",
+      "packages/hooks",
+      "packages/use-operation",
+      "packages/react-abortable-fetch",
+      "packages/component-library",
+      "packages/svg",
+      "packages/the-watcher",
+      "packages/use-mathjax",
+      "packages/use-shortcuts",
+      "packages/graphql-explorer",
+      "packages/website"
+    ]
+  },
+  "volta": {
+    "node": "14.16.0",
+    "yarn": "1.22.0"
+  },
+  "resolutions": {
+    "@types/react": "^17.0.0",
+    "@types/webpack": "4.41.21",
+    "d3-array": "^2.4.0",
+    "d3-scale": "^3.3.0",
+    "d3-time": "^2.1.1",
+    "effection": "=2.0.0-preview.11",
+    "@effection/node": "=2.0.0-preview.11",
+    "lodash": "^4.17.21",
+    "node-forge": "^0.10.0",
+    "postcss": "^7.0.35",
+    "ssri": "8.0.1",
+    "url-parse": "^1.5.1"
+  },
+  "dependencies": {},
+  "author": "PearlineDavis",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AleneMcCullough/praesentiumut.git"
+  },
+  "homepage": "https://github.com/AleneMcCullough/praesentiumut.git"
+}

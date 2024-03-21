@@ -1,0 +1,44 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./packages/devtools"
+    },
+    {
+      "path": "./packages/the-watcher"
+    },
+    {
+      "path": "./packages/testing"
+    },
+    {
+      "path": "./packages/util/tsconfig.dist.json"
+    },
+    {
+      "path": "./packages/hooks/tsconfig.dist.json"
+    },
+    {
+      "path": "./packages/use-operation/tsconfig.dist.json"
+    },
+    {
+      "path": "./packages/react-abortable-fetch/tsconfig.dist.json"
+    },
+    {
+      "path": "./packages/component-library/tsconfig.dist.json"
+    },
+    {
+      "path": "./packages/svg/tsconfig.dist.json"
+    },
+    {
+      "path": "./packages/use-shortcuts/tsconfig.dist.json"
+    },
+    {
+      "path": "./packages/graphql-explorer/tsconfig.dist.json"
+    },
+    {
+      "path": "./packages/use-mathjax/tsconfig.dist.json"
+    },
+    {
+      "path": "./packages/website/tsconfig.dist.json"
+    }
+  ]
+}

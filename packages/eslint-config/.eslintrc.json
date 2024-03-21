@@ -1,0 +1,5 @@
+{
+  "extends": [
+    "@cutting/eslint-config"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "name": "@cutting/use-mathjax",
+  "description": "easy mathjax in react.",
+  "version": "4.24.0",
+  "types": "dist/index.d.ts",
+  "typings": "dist/index.d.ts",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dagda1/cuttingedge.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "start": "PORT=9999 NODE_ENV=development cutting devserver-start",
+    "test": "NODE_ENV=test cutting test",
+    "lint": "yarn eslint ./src/**/*.{ts,tsx}",
+    "lint:fix": "yarn lint --fix",
+    "build": "NODE_ENV=production cutting rollup",
+    "prepublishOnly": "yarn build"
+  },
+  "dependencies": {
+    "@cutting/util": "4.24.0",
+    "assert-ts": "^0.3.2",
+    "mathjax": "3",
+    "mathjax3": "3.0.0-beta.4"
+  },
+  "devDependencies": {
+    "@cutting/devtools": "4.24.0",
+    "@cutting/eslint-config": "4.23.0",
+    "@cutting/useful-types": "4.22.1",
+    "@testing-library/jest-dom": "^5.11.10",
+    "@types/jest": "^26.0.22",
+    "@types/mathjax": "^0.0.36",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-syntax-highlighter": "^15.4.3",
+    "typescript": "^4.2.4"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "keywords": [
+    "hotkeys",
+    "focus",
+    "react",
+    "reactjs",
+    "reactnative",
+    "hooks",
+    "hook",
+    "hooks"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/use-mathjax.esm.js",
+  "browser": "dist/use-mathjax.umd.js",
+  "volta": {
+    "extends": "../../package.json"
+  }
+}

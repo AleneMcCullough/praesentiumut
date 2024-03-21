@@ -1,0 +1,60 @@
+{
+  "name": "@cutting/use-shortcuts",
+  "description": "Effortlessly create keyboard shortcuts with this react hook.",
+  "version": "4.23.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dagda1/cuttingedge.git"
+  },
+  "main": "dist/index.js",
+  "module": "dist/use-shortcuts.esm.js",
+  "browser": "dist/use-shortcuts.umd.js",
+  "sideEffects": false,
+  "types": "dist/index.d.ts",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "start": "PORT=8888 NODE_ENV=development cutting devserver-start",
+    "test:types": "dtslint types --localTs ../../node_modules/typescript/lib --expectOnly",
+    "test:unit": "NODE_ENV=test cutting test a",
+    "test": "CI=true yarn test:unit && yarn test:types",
+    "build": "NODE_ENV=production cutting rollup",
+    "prepublishOnly": "yarn build"
+  },
+  "dependencies": {
+    "@cutting/util": "4.24.0",
+    "classnames": "^2.3.1",
+    "mousetrap": "^1.6.5"
+  },
+  "devDependencies": {
+    "@cutting/devtools": "4.24.0",
+    "@cutting/eslint-config": "4.23.0",
+    "@cutting/useful-types": "4.22.1",
+    "@testing-library/jest-dom": "^5.11.10",
+    "@types/mousetrap": "^1.6.7",
+    "dtslint": "^4.0.9",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "typescript": "^4.2.4"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "volta": {
+    "extends": "../../package.json"
+  },
+  "keywords": [
+    "hotkeys",
+    "focus",
+    "react",
+    "reactjs",
+    "reactnative",
+    "hooks",
+    "hook",
+    "use-shortcuts"
+  ]
+}

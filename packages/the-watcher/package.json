@@ -1,0 +1,32 @@
+{
+  "name": "@cutting/the-watcher",
+  "version": "0.2.0",
+  "description": "Run and watch commands concurrently",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "bin": {
+    "watcher": "./bin/watcher.js"
+  },
+  "files": [
+    "bin/**/*.*"
+  ],
+  "scripts": {
+    "start": "echo no op",
+    "test": "echo no op",
+    "lint": "yarn eslint ./src/**/*.{ts,tsx}",
+    "lint:fix": "yarn lint --fix",
+    "build": "NODE_ENV=production cutting ts-build",
+    "prepublish": "yarn build"
+  },
+  "dependencies": {
+    "@effection/node": "=2.0.0-preview.11",
+    "commander": "^7.2.0",
+    "effection": "=2.0.0-preview.11"
+  },
+  "devDependencies": {
+    "ts-node": "^9.1.1"
+  },
+  "volta": {
+    "extends": "../../package.json"
+  }
+}
